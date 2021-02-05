@@ -2,7 +2,7 @@ require 'telegram/bot'
 require 'mongo'
 require 'date'
 
-token = '1639209495:AAEXRblkcF1R8ByYZVutxgFh2yVz0wLCO08'  #Telegram Token
+token =   #Telegram Token
 admin_id = '229173366'  #luca_fulgenzi ID
 piatti = ['Calzone Salame e Ricotta', 'Calzone Patate e Salsicca', 'Panino wustel e patatine']
 prezzi = [1.5, 1.5, 1]
@@ -10,7 +10,7 @@ ordinazione = Array.new
 totale = 0
 
 Mongo::Logger.logger.level = ::Logger::FATAL
-client = Mongo::Client.new('mongodb+srv://admin:admin@cluster0.rhtp2.mongodb.net/telegram-bot?retryWrites=true&w=majority')
+client = Mongo::Client.new() #Mongo API
 
 
 kb = [
